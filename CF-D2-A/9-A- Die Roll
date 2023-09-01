@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cin>> a >> b;
+    int maxpoint = max(a,b);
+    int prob = 6-maxpoint;
+    int die = 6;
+    prob++;
+    switch(prob)
+    {
+    case 6:
+        prob/=6;
+        die/=6;
+        break;
+    case 4:
+        prob/=2;
+        die/=2;
+        break;
+    case 3:
+        prob/=3;
+        die/=3;
+        break;
+    case 2:
+        prob/=2;
+        die/=2;
+        break;
+
+    default:
+        break;
+    }
+
+    cout << prob << "/" << die << endl;
+
+
+}
