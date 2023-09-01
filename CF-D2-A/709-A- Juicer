@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,b,d;cin >> n >> b >> d;
+    vector<int> j(n);
+    for(int i=0 ; i<n ; i++)
+    {
+        cin >> j[i];
+    }
+    int totaltime =0,totalorg = 0;
+    for(int i = 0 ; i<n ; i++)
+    {
+        if(j[i]<=b) totalorg += j[i];
+
+        if(totalorg > d){
+            totaltime++;
+            totalorg = 0;
+        }
+
+    }
+    cout << totaltime << endl;
+}
