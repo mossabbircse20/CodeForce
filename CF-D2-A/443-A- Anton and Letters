@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string s; getline(cin,s);
+    set<char> ss; 
+    for(int i = 0 ; i<s.size() ; i++){
+        if(s[i]>= 'a' && s[i]<='z'){
+            char temp = s[i];
+            ss.insert(temp);
+        }
+    }
+    cout << ss.size() << endl;
+ 
+    return 0;
+}
