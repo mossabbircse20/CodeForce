@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,cnt=0;
+    long long x,sum=0;
+    cin>> n >> x;
+    sum = x;
+    while(n--)
+    {
+        char c;cin>>c;
+        long long d;cin>>d;
+        if(c=='+')
+        {
+            sum+=d;
+        }
+        else
+        {
+            if(c=='-' && d<=sum)
+            {
+                sum-=d;
+            }
+            else{
+                cnt++;
+            }
+
+        }
+    }
+    cout << sum << " " << cnt << endl;
+}
