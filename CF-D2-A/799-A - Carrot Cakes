@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,t,k,d,time1=0,quantity=0; cin >> n >> t >> k >> d;
+    time1 = (t+d)/t;
+    quantity= time1*k;
+    if(quantity<n)
+    {
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+
+}
